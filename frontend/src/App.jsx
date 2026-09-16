@@ -1,9 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Landing from "./pages/Landing";
+import Dashboard from "./pages/Dashboard";
+import Documents from "./pages/Documents";
+import Expenses from "./pages/Expenses";
+
 function App() {
   return (
-    <div>
-      <h1>LifeSync AI</h1>
-      <p>AI-Powered Secure Digital Life Management Platform</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/documents" element={<Documents />} />
+        <Route path="/expenses" element={<Expenses />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
